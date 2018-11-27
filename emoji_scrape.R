@@ -23,4 +23,3 @@ scrap_all_emoji=function(){
     return(text_emoji)}
   text_emoji=lapply(str_url, scrap_emo)%>%do.call(bind_rows, args=.)%>%.[duplicated(.)==F,]
   return(text_emoji)}
-text_emoji=scrap_all_emoji()
